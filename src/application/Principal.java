@@ -12,14 +12,15 @@ public class Principal {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		int quantity;
-		Product product = new Product();
+		
 		System.out.println("Enter product data:");
 		System.out.println("name: ");
-		product.name = sc.nextLine();
+		String name = sc.nextLine();
 		System.out.println("price: ");
-		product.price = sc.nextDouble();
+		double price = sc.nextDouble();
 		System.out.println("Quantity in stock: ");
-		product.quantity = sc.nextInt();
+		
+		Product product = new Product(name, price);
 		
 		System.out.println();
 		System.out.println("Product data: "+product);
